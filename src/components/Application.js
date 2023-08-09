@@ -7,37 +7,6 @@ import DayList from "components/DayList";
 import Appointment from "components/Appointment/index";
 import {getAppointmentsForDay, getInterview, getInterviewersForDay} from "../helpers/selectors";
 
-// const appointments = [
-//   {
-//     id: 1,
-//     time: "12pm",
-//   },
-//   {
-//     id: 2,
-//     time: "1pm",
-//     interview: {
-//       student: "Lydia Miller-Jones",
-//       interviewer: {
-//         id: 1,
-//         name: "Sylvia Palmer",
-//         avatar: "https://i.imgur.com/LpaY82x.png",
-//       }
-//     }
-//   },
-//   {
-//     id: 3,
-//     time: "2pm",
-//     interview: {
-//       student: "Archie Cohen",
-//       interviewer: {
-//         id: 2,
-//         name: "Tori Malcolm",
-//         avatar: "https://i.imgur.com/LpaY82x.png",
-//       }
-//     }
-//   }
-// ];
-
 export default function Application(props) {
 
   const dailyAppointments = getAppointmentsForDay(state, state.day);
@@ -49,7 +18,6 @@ export default function Application(props) {
     interviewers: {}
   });
   const setDay = day => {
-    console.log("day from setDay:", day);
     return setState({ ...state, day })};
 
   const setDays = (days) => {
