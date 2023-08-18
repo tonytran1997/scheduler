@@ -1,12 +1,11 @@
 import React from "react";
-import { render} from "@testing-library/react";
 
-import Appointment from "components/Appointment/index";
-import Form from "components/Appointment/Form";
+import { render, cleanup } from "@testing-library/react";
 
-describe("Appointment", () => {
-  it("renders without crashing", () => {
-    render(<Appointment />);
-  });
+import Application from "components/Application";
 
-}); 
+afterEach(cleanup);
+
+it("renders without crashing", () => {
+  render(<Application />);
+});
