@@ -1,5 +1,5 @@
 import React from "react";
-import React, { useState,useEffect } from "react";
+// import React, { useState,useEffect } from "react";
 import useApplicationData from "hooks/useApplicationData";
 
 import axios from 'axios';
@@ -126,9 +126,6 @@ export default function Application(props) {
         />
       </section>
       <section className="schedule">
-      {/* {dailyAppointments.map(appointment =>{
-          return <Appointment key={appointment.id} {...appointment} />
-        })} */}
         {schedule}
         <Appointment key="last" time="5pm" />
       </section>
